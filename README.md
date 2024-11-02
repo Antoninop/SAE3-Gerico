@@ -33,3 +33,14 @@ Network et non localhost !!!
 ```bash
 frontend-1  |   ➜  Network: http://xxx.xx.x.x:5173/
 ```
+
+7. **Pour tester le site :**
+Pour se connecter et ajoutez des users vous pouvez call l'api à /benchmark et 
+vous connecter sur l'user avec :
+
+mail : a@a
+mot de passe : a
+
+```bash
+curl -X POST http://127.0.0.1:3005/api/benchmark
+```
