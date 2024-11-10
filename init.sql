@@ -10,7 +10,8 @@ CREATE TABLE Users (
 	position VARCHAR(50),
 	is_admin BOOLEAN DEFAULT FALSE,
 	archived BOOLEAN DEFAULT FALSE,
-	salary DECIMAL(10, 2) DEFAULT NULL
+	salary DECIMAL(10, 2) DEFAULT NULL,
+	remaining_holidays INT DEFAULT 30
 );
 
 DROP TABLE IF EXISTS Payroll;
@@ -35,7 +36,6 @@ CREATE TABLE holiday (
 	date DATE NOT NULL,
 	state TINYINT(1) DEFAULT 0,
 	denied TINYINT(1) DEFAULT 0,
-	remaining_holidays INT DEFAULT 0,
 	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (id_user, date)
 );
