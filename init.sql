@@ -29,7 +29,7 @@ CREATE TABLE Payroll (
 
 DROP TABLE IF EXISTS holiday;
 CREATE TABLE holiday (
-	id_holiday INT NOT NULL,
+	id_holiday CHAR(50),
 	id_user CHAR(50),
 	first_name VARCHAR(50),
 	length ENUM('half_day', 'full_day'),
