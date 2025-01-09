@@ -39,3 +39,12 @@ CREATE TABLE holiday (
 	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (id_user, date)
 );
+DROP TABLE IF EXISTS invitation;
+CREATE TABLE invitation (
+    id_invitation CHAR(50),
+    email VARCHAR(255) NOT NULL,
+    token VARCHAR(255) NOT NULL,
+    status ENUM('pending', 'accepted') DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
